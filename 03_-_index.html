@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Book Library with Firebase</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='03_-_book_library_firebase.css'>
+    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-firestore.js"></script>
+</head>
+<body>
+    <h1> Book Library </h1>
+    
+    <div class= "content">
+            <form id="add-book-form">
+                <input type="text" name="title" placeholder="Book Title">
+                <input type="text" name="author" placeholder="Author">
+                <input type="text" name="length" placeholder="Book Length">
+                <input type="checkbox" name="read" value ="true" checked class="tick"><label for"read">read</label>
+                <button>Add Book</button>
+            </form>
+            <ul id="book-list"></ul>
+    </div>
+
+
+    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-analytics.js"></script>
+
+    <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyChmMybos1pjOjHjRRTM7gdbvAA0Mp4zvY",
+        authDomain: "odin-project-book-library-lng.firebaseapp.com",
+        databaseURL: "https://odin-project-book-library-lng.firebaseio.com",
+        projectId: "odin-project-book-library-lng",
+        storageBucket: "odin-project-book-library-lng.appspot.com",
+        messagingSenderId: "632116459345",
+        appId: "1:632116459345:web:45d4df1119320af2698570",
+        measurementId: "G-H1ZLTSSGJ6"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+
+    const database = firebase.firestore();
+    </script>
+
+    <script src='03_-_book_library_firebase.js'></script>
+</body>
+</html>
