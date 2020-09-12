@@ -1,6 +1,6 @@
 # TOP-Library-Firebase-LNG
 
-This is a sumple web app that allows you to add your favorite books online.
+This is a simple web app that allows you to add your favorite books online.
 
 Tech Stack:
 HTML5
