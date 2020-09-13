@@ -46,10 +46,14 @@ function renderBook(doc){
 
     function updateBook(e){
         e.stopPropagation();
-        let promptedStatus = confirm("Did you finish reading this book?")
+        let promptedStatus = confirm("Did you finish reading this book?");
+        let promptedStatusText = "";
+        if (promptedStatus === true){
+            promptedStatusText = "read";
+        } else promptedStatusText = "unread";
         let id = e.target.parentElement.getAttribute("data-id");
         database.collection("books").doc(id).update({
-            status: promptedStatus
+            status: promptedStatusText
         })
     } 
 
